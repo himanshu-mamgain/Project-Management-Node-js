@@ -2,6 +2,7 @@
     width: 50%;
     margin: 40px auto;
     box-sizing: border-box;
+    height: 60vh;
 }
 
 h2 {
@@ -65,4 +66,27 @@ h2 {
 
 .add-project-form button:hover, .login-form button:hover, .signup-form button:hover {
     background-color: #eee;
+}
+
+.option-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+label {
+    color: #fff;
+    margin: 0 10px;
+    margin-left: 0;
+    font-size: 1.3rem;
+    padding: 10px;
+    font-weight: 800;
+    padding-left: 0;
+}
+
+select {
+    font-size: 1.2rem;
+    padding: 5px 12px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
 }

@@ -5,13 +5,29 @@
 <div class="home-container">
     <h2>Created to arrange multiple projects at one place.</h2>
     <hr>
+    <h2>These are all my projects created with nodejs and reactjs</h2>
+    <h2>Click on them to view the github link and deployed link.</h2>
 </div>
 
+<link rel="stylesheet" href="display.css">
+
 <div class="project-display-container">
-    <%- include('display') -%>
-    <%- include('display') -%>
-    <%- include('display') -%>
-    <%- include('display') -%>
+    <% projects.map((project) => { %>
+        <div class="card-container">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="<%= project.imgLink %>" alt="projectImg" style="width:300px;height:300px;">
+                </div>
+                <div class="flip-card-back">
+                    <h1 class="project-title"><%= project.title %></h1> 
+                    <a href="<%= project.githubLink %>" target="_blank">GitHub Link</a>
+                    <a href="<%= project.deployedLink %>" target="_blank">Deployed Link</a>
+                </div>
+                </div>
+            </div>
+        </div>
+    <% }); %>
 </div>
 
 <%- include('./partials/footer') -%>

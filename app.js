@@ -23,7 +23,7 @@ const projectRoute = require("./routes/project");
 const addProjectRoute = require("./routes/addProject");
 const loginRoute = require("./routes/login");
 const signupRoute = require("./routes/signup");
-const deleteRoute = require("./routes/project");
+const deleteRoute = require("./routes/delete");
 
 app.use("/", homeRoute);
 app.use(projectRoute);

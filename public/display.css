@@ -1,7 +1,14 @@
-.card-container {
+h2 {
+    text-align: center;
+}
+
+.project-container, .card-container {
     display: flex;
-    margin: 40px;
+    margin: 40px 30px;
+    justify-content: center;
     cursor: pointer;
+    box-sizing: border-box;
+    flex-wrap: wrap;
 }
 
 .flip-card {
