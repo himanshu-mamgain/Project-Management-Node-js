@@ -15,7 +15,7 @@ router.get("/projects", async (req, res) => {
     }
 });
 
-router.post("/:id", async (req, res) => {
+router.get("/:id", async (req, res) => {
     try {
         const foundProject = await Project.findById(req.params.id);
         if(foundProject == null) {

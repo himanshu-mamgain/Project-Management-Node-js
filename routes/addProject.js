@@ -18,9 +18,10 @@ router.post("/add%20projects", async (req, res) => {
             deployedLink: req.body.deployLink
         });
 
-        project.save((err, project) => {
+        await project.save((err, project) => {
             if(!err) {
                 console.log("Project added successfully!");
+                res.redirect("/projects");
             } else {
                 console.log(err);
                 res.redirect("/add%20projects");
