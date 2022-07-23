@@ -1,0 +1,28 @@
+<%- include('./partials/header') -%>
+<link rel="stylesheet" href="display.css">
+
+<script src="https://kit.fontawesome.com/a6c541db65.js" crossorigin="anonymous"></script>
+
+<% projects.map((project) => { %>
+    <div class="card-container">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_f0b606abb6d19089febc9faeeba5bc05/nodejs-development-services.png" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+                <h1 class="project-title"><%= project.title %></h1> 
+                <a href="<%= project.githubLink %>" target="_blank">GitHub Link</a>
+                <a href="<%= project.deployLink %>" target="_blank">Deployed Link</a>
+                <form action="/project/delete/<%= project._id %>" method="post" class="del-form">
+                    <button type="submit">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+<% }); %>
+
+<%- include('./partials/footer') -%>

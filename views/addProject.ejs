@@ -1,0 +1,15 @@
+<%- include('./partials/header') -%>
+
+<link rel="stylesheet" href="form.css" type="text/css">
+
+<div class="form-container">
+    <form action="/add%20projects" method="post" class="add-project-form">
+        <h2>Fill the details to add the project</h2>
+        <input type="text" name="title" placeholder="Enter your project title" required>
+        <input type="url" name="githubLink" placeholder="Enter your github repository link" required>
+        <input type="url" name="deployedLink" placeholder="Enter your deployed link" >
+        <button type="submit">Add Project</button>
+    </form>
+</div>
+
+<%- include('./partials/footer') -%>

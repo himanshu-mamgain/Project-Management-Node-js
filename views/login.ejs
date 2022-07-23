@@ -1,0 +1,17 @@
+<%- include('./partials/header') -%>
+
+<link rel="stylesheet" href="form.css" type="text/css">
+
+<div class="form-container">
+    <form action="/login" method="post" class="login-form">
+        <h2>Login: to add project</h2>
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <input type="password" name="password" placeholder="Enter your password" required>
+        <button type="submit">Login</button>
+    </form>
+    <form action="/signup" method="get" class="signup-form">
+        <button type="submit">Signup</button>
+    </form>
+</div>
+
+<%- include('./partials/footer') -%>
