@@ -7,7 +7,7 @@ router.post("/:id", async (req, res) => {
     try {
         const project = await Project.findById(req.params.id);
         if(project == null) {
-            console.log("Project is deleted successfully!");
+            console.log("There is no project with matching id");
             res.redirect("/projects");
         } else {
             await project.remove();

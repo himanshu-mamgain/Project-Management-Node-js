@@ -8,10 +8,11 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
+    background-color: #eee;
 }
 
 nav {
-    background-color: #495C83;
+    background-color: #000;
     position: fixed;
     width: 100%;
     position: relative;
@@ -28,7 +29,7 @@ nav ul {
 
 nav ul li h3 {
     max-width: max-content;
-    color: #fff;
+    color: #F0DB4F;
     margin: 0;
     position: absolute;
     left: 20px;
@@ -41,7 +42,7 @@ nav ul li h3 {
 
 nav ul li a {
     font-size: 1.3rem;
-    color: #fff;
+    color: #F0DB4F;
     text-decoration: none;
     font-weight: 800;
     padding: 40px 15px;
@@ -49,6 +50,12 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: underline;
+}
+
+hr {
+    border-color: #F0DB4F;
+    background-color: #F0DB4F;
+    width: 80%;
 }
 
 @media only screen and (max-width: 800px) {

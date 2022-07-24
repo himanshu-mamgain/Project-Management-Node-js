@@ -2,13 +2,13 @@
     width: 50%;
     margin: 40px auto;
     box-sizing: border-box;
-    height: 100vh;
+    height: 80vh;
 }
 
 h2 {
     text-align: center;
     font-size: 2.2rem;
-    color: #fff;
+    color: #F0DB4F;
     margin: 0;
     margin-bottom: 10px;
 }
@@ -17,7 +17,7 @@ h2 {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
-    background-color: #495C83;
+    background-color: #000;
     border-radius: 8px;
     padding: 40px;
 }
@@ -25,20 +25,27 @@ h2 {
 .add-project-form input, .login-form input {
     padding: 8px 12px;
     font-size: 1.2rem;
-    background-color: #fff;
+    background-color: #F0DB4F;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
     border: 1px solid black;
     border-radius: 5px;
+}
+
+input::placeholder {
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .add-project-form button, .login-form button {
     padding: 12px 14px;
     font-weight: 700;
-    background-color: #fff;
-    color: #495C83;
+    background-color: #F0DB4F;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
     border: none;
     border-radius: 8px;
     font-size: 1.2rem;
-    box-shadow: 0 1px 4px 2px #003754;
     margin: 0 30%;
     margin-top: 10px;
     cursor: pointer;
@@ -55,17 +62,19 @@ h2 {
     font-weight: 800;
     display: block;
     margin: 0 auto;
-    background-color: #fff;
-    color: #495C83;
+    background-color: #F0DB4F;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
     border: none;
     border-radius: 8px;
     font-size: 1.2rem;
-    box-shadow: 0 1px 4px 2px #003754;
+    box-shadow: 0 1px 4px 2px #000;
     cursor: pointer;
 }
 
 .add-project-form button:hover, .login-form button:hover, .signup-form button:hover {
-    background-color: #eee;
+    background-color: #000;
+    color: #F0DB4F;
 }
 
 .option-container {
@@ -74,7 +83,7 @@ h2 {
 }
 
 label {
-    color: #fff;
+    color: #F0DB4F;
     margin: 0 10px;
     margin-left: 0;
     font-size: 1.3rem;
@@ -85,8 +94,16 @@ label {
 
 select {
     font-size: 1.2rem;
+    color: #F0DB4F;
+    background-color: #000;
+    border: 3px solid #F0DB4F;
     padding: 5px 12px;
     border-radius: 8px;
     text-align: center;
     cursor: pointer;
+}
+
+select option{
+    cursor: pointer;
+    color: #F0DB4F;
 }

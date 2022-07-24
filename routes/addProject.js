@@ -16,13 +16,16 @@ router.post("/add%20projects", async (req, res) => {
 
         switch(req.body.type) {
             case "nodeJs":
-                imgLink = "https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_f0b606abb6d19089febc9faeeba5bc05/nodejs-development-services.png";
+                imgLink = "https://blog.rahulbhutani.com/wp-content/uploads/2020/10/nodejs-1.png";
                 break;
             case "reactJs":
-                imgLink = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png";
+                imgLink = "https://res.cloudinary.com/practicaldev/image/fetch/s--54ca_F2q--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/1wwdyw5de8avrdkgtz5n.png";
                 break;
             case "restApi":
-                imgLink = "http://plugins.miniorange.com/wp-content/uploads/2021/06/REST-API-icon.jpg";
+                imgLink = "https://uploads-ssl.webflow.com/6021b6d3d69a2f4e053b8d55/6170df8ad624dbf64f269eb3_Rest%20API%20.png";
+                break;
+            case "javaScript":
+                imgLink = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png";
                 break;
             case "php":
                 imgLink = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png"

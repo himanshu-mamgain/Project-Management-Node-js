@@ -69,14 +69,20 @@ h2 {
     background-color: #eee;
 }
 
-.del-form button {
+.action-btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+    margin-top: 25px;
+}
+
+.action-form button {
     background-color: #6E85B7;
     border: none;
     cursor: pointer;
 }
 
-.del-form button i {
+.action-form button i {
     font-size: 1.8rem;
     margin: 10px auto;
-    color: red;
 }
