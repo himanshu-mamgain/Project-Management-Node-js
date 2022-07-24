@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const router = express.Router();
 
 const Project = require('../models/project');
+const User = require('../models/user');
 
 const date = require('../Date');
 
@@ -38,7 +39,8 @@ router.post("/add%20projects", async (req, res) => {
             title: req.body.title,
             githubLink: req.body.githubLink,
             deployedLink: req.body.deployedLink,
-            imgLink: imgLink
+            imgLink: imgLink,
+            username: user.username
         });
 
         await project.save((err, project) => {

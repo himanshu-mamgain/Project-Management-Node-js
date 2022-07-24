@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const router = express.Router();
+const bcrypt = require('bcrypt');
 
 const date = require('../Date');
 
@@ -12,11 +13,14 @@ router.get("/login", (req, res) => {
 
 router.post("/login", async (req, res) => {
     try {   
-        const user = await User.find({email: req.body.email});
+        const user = await User.findOne({email: req.body.email});
         if(user == null) {
             res.redirect("/signup");
-        } else {
+        }
+        if(await bcrypt.compare(req.body.password, user.password)) {
             res.redirect("/add%20projects");
+        } else {
+            res.redirect("/login");
         }
     } catch (err) {
         console.log(err);

@@ -23,6 +23,9 @@
                     <img src="<%= project.imgLink %>" alt="projectImg" style="width:300px;height:300px;">
                 </div>
                 <div class="flip-card-back">
+                    <a href="/project%20management/admin/project%20info/<%=project.id%>" class="info-link" style="background-color: #F0DB4F; border: 1.5px solid #000; border-radius: 50%;">
+                        <i class="fas fa-info" style="color: blue; font-size: 1.2rem; padding: 3px 5px; background-color: #F0DB4F;"></i>
+                    </a>
                     <h1 class="project-title"><%= project.title %></h1> 
                     <a href="<%= project.githubLink %>" target="_blank">GitHub Link</a>
                     <a href="<%= project.deployedLink %>" target="_blank">Deployed Link</a>
