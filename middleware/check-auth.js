@@ -1,4 +1,7 @@
 const jwt = require('jsonwebtoken');
+const mongoose = require('mongoose');
+
+const User = require('../models/user');
 
 const checkAuth = (req, res, next) => {
     const token = req.cookies.jwt;
@@ -18,4 +21,26 @@ const checkAuth = (req, res, next) => {
     }
 };
 
-module.exports = checkAuth;
+const checkUser = (req, res, next) => {
+    const token = req.cookies.jwt;
+
+    if(token) {
+        jwt.verify(token, process.env.SECRET_KEY, async (err, decodedToken) => {
+            if(!err) {
+                console.log(decodedToken);
+                let user = await User.findById(decodedToken.id);
+                res.locals.user = user; 
+                next();
+            } else {
+                console.log(err);
+                res.locals.user = null;
+                next();
+            }
+        });
+    } else {
+        res.locals.user = null;
+        next();
+    }
+};
+
+module.exports = {checkAuth, checkUser};

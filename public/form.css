@@ -32,7 +32,7 @@ h2 {
 .add-project-form input, .login-form input {
     padding: 8px 12px;
     font-size: 1.2rem;
-    background-color: #F0DB4F;
+    background-color: #eee;
     color: #000;
     font-family: 'Open Sans', sans-serif;
     border: 1px solid black;
@@ -80,8 +80,8 @@ input::placeholder {
 }
 
 .add-project-form button:hover, .login-form button:hover, .signup-form button:hover {
-    background-color: #000;
-    color: #F0DB4F;
+    background-color: #eee;
+    color: #000;
 }
 
 .option-container {

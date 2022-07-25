@@ -25,9 +25,15 @@
                     <li>
                         <a href="/add%20projects">Add Projects</a>
                     </li>
-                    <li>
-                        <a href="/login">Login</a>
-                    </li>
+                    <% if(user) { %>
+                        <li>
+                            <a href="/logout">Logout</a>
+                        </li>
+                    <% } else { %>
+                        <li>
+                            <a href="/login">Login</a>
+                        </li>
+                    <% } %>
                 </div>
             </ul>
         </nav>

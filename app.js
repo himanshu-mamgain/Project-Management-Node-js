@@ -27,7 +27,9 @@ const addProjectRoute = require("./routes/addProject");
 const loginRoute = require("./routes/login");
 const signupRoute = require("./routes/signup");
 const deleteRoute = require("./routes/delete");
+const { checkUser } = require("./middleware/check-auth");
 
+app.use("*", checkUser);
 app.use("/", homeRoute);
 app.use(projectRoute);
 app.use(addProjectRoute);

@@ -4,11 +4,9 @@ const router = express.Router();
 
 const Project = require('../models/project');
 
-const User = require("../models/user");
-
 const date = require('../Date');
 
-const checkAuth = require('../middleware/check-auth');
+const { checkAuth } = require('../middleware/check-auth');
 
 router.get("/add%20projects", checkAuth, (req, res) => {
     res.render('addProject', {date: date});
