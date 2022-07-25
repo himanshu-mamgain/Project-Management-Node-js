@@ -27,7 +27,7 @@ i {
     color: #F0DB4F;
 }
 
-@media  only screen and (max-width: 800px) {
+@media  only screen and (max-width: 600px) {
     footer {
         flex-direction: column;
         justify-content: center;
