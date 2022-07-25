@@ -27,7 +27,7 @@ const addProjectRoute = require("./routes/addProject");
 const loginRoute = require("./routes/login");
 const signupRoute = require("./routes/signup");
 const deleteRoute = require("./routes/delete");
-const { checkUser } = require("./middleware/check-auth");
+const { checkUser } = require("./middleware/check");
 
 app.use("*", checkUser);
 app.use("/", homeRoute);
@@ -36,18 +36,6 @@ app.use(addProjectRoute);
 app.use(loginRoute);
 app.use(signupRoute);
 app.use("/project/delete", deleteRoute);
-
-app.get('/set-cookies', (req, res) => {
-    res.cookie('newUser', false);
-    res.cookie('isRegistered', true, { maxAge: 1000 * 60 * 60 * 24, httpOnly: true});
-
-    console.log('cookies');
-});
-
-app.get('/read-cookies', (req, res) => {
-    const cokkies = req.cookies;
-    console.log(cookies);
-});
 
 const port = process.env.PORT || 3000;
 

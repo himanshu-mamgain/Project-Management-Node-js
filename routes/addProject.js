@@ -1,12 +1,15 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const jwt = require('jsonwebtoken');
+
 const router = express.Router();
 
 const Project = require('../models/project');
+const User = require('../models/user');
 
 const date = require('../Date');
 
-const { checkAuth } = require('../middleware/check-auth');
+const { checkAuth } = require('../middleware/check');
 
 router.get("/add%20projects", checkAuth, (req, res) => {
     res.render('addProject', {date: date});
@@ -35,12 +38,15 @@ router.post("/add%20projects", async (req, res) => {
             default:
                 imgLink = "https://www.kindpng.com/picc/m/388-3883219_icon-security-testing-web-web-application-testing-icon.png"
         }
+
+        const user = await User.findById(req.cookies.userId);
         
         const project = new Project({
             title: req.body.title,
             githubLink: req.body.githubLink,
             deployedLink: req.body.deployedLink,
-            imgLink: imgLink
+            imgLink: imgLink,
+            username: user.username
         });
 
         await project.save((err, project) => {

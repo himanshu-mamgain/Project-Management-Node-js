@@ -29,6 +29,7 @@ router.post("/login", async (req, res) => {
         if(await bcrypt.compare(req.body.password, user.password)) {
             const token = createToken(user._id);
             res.cookie('jwt', token, {httpOnly: true, maxAge: maxAge * 1000 });
+            res.cookie('userId', user._id);
             res.redirect("/add%20projects");
         } else {
             res.render('login', {err: "Please enter correct password to login", date: date});
