@@ -1,10 +1,13 @@
 require("dotenv").config();
 const express = require('express');
+const cookieParser = require('cookie-parser');
 const app = express();
 
 app.use(express.urlencoded({extended: true}));
 
 app.use(express.static('public'));
+
+app.use(cookieParser());
 
 app.set("view engine", "ejs");
 
@@ -31,6 +34,18 @@ app.use(addProjectRoute);
 app.use(loginRoute);
 app.use(signupRoute);
 app.use("/project/delete", deleteRoute);
+
+app.get('/set-cookies', (req, res) => {
+    res.cookie('newUser', false);
+    res.cookie('isRegistered', true, { maxAge: 1000 * 60 * 60 * 24, httpOnly: true});
+
+    console.log('cookies');
+});
+
+app.get('/read-cookies', (req, res) => {
+    const cokkies = req.cookies;
+    console.log(cookies);
+});
 
 const port = process.env.PORT || 3000;
 

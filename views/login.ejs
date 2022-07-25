@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="form.css" type="text/css">
 
 <div class="form-container">
+    <span id="err-msg"><%= err %></span>
     <form action="/login" method="post" class="login-form">
         <h2>Login: to add project</h2>
         <input type="email" name="email" placeholder="Enter your email" required>
