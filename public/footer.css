@@ -26,3 +26,13 @@ i {
     font-size: 2.5rem;
     color: #F0DB4F;
 }
+
+@media  only screen and (max-width: 800px) {
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        bottom: 0;
+    }
+}

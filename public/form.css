@@ -114,3 +114,18 @@ select option{
     cursor: pointer;
     color: #F0DB4F;
 }
+
+@media  only screen and (max-width: 800px) {
+    .form-container {
+        width: 100%;
+        height: auto;
+    }
+    .option-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+   select {
+        text-align-last: center
+   }
+}

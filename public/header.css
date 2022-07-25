@@ -58,7 +58,7 @@ hr {
     width: 80%;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
     nav ul {
         flex-direction: column;
         justify-content: center;
@@ -68,8 +68,10 @@ hr {
     }
 
     nav ul li h3 {
+        position: relative;
         text-align: center;
-        top: 10%;
+        font-size: 1.8rem;
+        top: 20%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
@@ -80,12 +82,16 @@ hr {
         padding-top: 10px;
         flex-direction: column;
         width: 100%;
-        margin-top: 15px;
         text-align: center;
     }
 
     .link-container li {
         margin-bottom: 5px;
+        border: 1px solid #F0DB4F;
+    }
+
+    nav ul li a {
+        font-size: 1.6rem;
     }
 
 }
