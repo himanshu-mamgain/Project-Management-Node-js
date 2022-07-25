@@ -36,7 +36,9 @@ i {
         bottom: 0;
         height: 25vh;
     }
-    i {
-        margin-left: 2rem;
+    .footer-links ul {
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
     }
 }
