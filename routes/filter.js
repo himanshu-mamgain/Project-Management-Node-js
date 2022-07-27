@@ -7,8 +7,8 @@ const Project = require('../models/project');
 const date = require('../Date');
 
 router.get('/nodeJs', async (req, res) => {
-    const nodeJsProjects = await Project.find({type: "nodeJs"});
     try {
+        const nodeJsProjects = await Project.find({type: "nodeJs"});
         res.render('project', {date: date, projects: nodeJsProjects});
     } catch(err) {
         console.log(err);
