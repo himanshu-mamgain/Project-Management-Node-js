@@ -37,9 +37,9 @@ app.use(projectRoute);
 app.use(addProjectRoute);
 app.use(loginRoute);
 app.use(signupRoute);
+app.use("/", filterRoute);
 app.use("/project/delete", deleteRoute);
 app.use("/", editRoute);
-app.use("/", filterRoute);
 
 const port = process.env.PORT || 3000;
 
