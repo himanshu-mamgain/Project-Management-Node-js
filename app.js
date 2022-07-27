@@ -27,6 +27,7 @@ const addProjectRoute = require("./routes/addProject");
 const loginRoute = require("./routes/login");
 const signupRoute = require("./routes/signup");
 const deleteRoute = require("./routes/delete");
+// const editRoute = require("./routes/edit");
 const { checkUser } = require("./middleware/check");
 const filterRoute = require("./routes/filter");
 
@@ -37,6 +38,7 @@ app.use(addProjectRoute);
 app.use(loginRoute);
 app.use(signupRoute);
 app.use("/project/delete", deleteRoute);
+
 app.use("/", filterRoute);
 
 const port = process.env.PORT || 3000;

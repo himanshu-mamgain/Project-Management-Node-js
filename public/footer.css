@@ -5,7 +5,7 @@ footer {
     background-color: #000;
     color: #F0DB4F;
     width: 100%;
-    height: 20vh;
+    height: fit-content;
     padding: 25px;
     margin-top: 20px;
 }
@@ -27,18 +27,16 @@ i {
     color: #F0DB4F;
 }
 
-@media  only screen and (max-width: 600px) {
+@media  only screen and (max-width: 700px) {
     footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
         position: relative;
         bottom: 0;
-        height: 25vh;
     }
     .footer-links ul {
-        justify-content: center;
-        align-items: center;
+        flex-direction: row;
         gap: 2.5rem;
     }
 }
