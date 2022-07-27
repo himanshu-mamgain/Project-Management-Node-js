@@ -1,0 +1,18 @@
+.page-from-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.angle-bracket {
+    color: #999;
+    font-weight: 600
+}
+
+button {
+    border: none;
+    font-size: 1.4rem;
+    font-weight: 530;
+    cursor: pointer;
+}

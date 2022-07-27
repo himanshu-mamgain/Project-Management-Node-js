@@ -9,7 +9,6 @@ const Project = require('../models/project');
 router.get("/projects", async (req, res) => {
     try {
         const projects = await Project.find();
-
         res.render('project', {projects: projects, date: date});
     } catch(err) {
         console.log(err);

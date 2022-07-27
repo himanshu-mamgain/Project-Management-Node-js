@@ -46,7 +46,8 @@ router.post("/add%20projects", async (req, res) => {
             githubLink: req.body.githubLink,
             deployedLink: req.body.deployedLink,
             imgLink: imgLink,
-            username: user.username
+            username: user.username,
+            type: req.body.type
         });
 
         await project.save((err, project) => {
