@@ -1,0 +1,25 @@
+<%- include('./partials/header') -%>
+
+<link rel="stylesheet" href="form.css" type="text/css">
+
+<div class="form-container">
+    <form action="/update%20project/<%= project.id %>" method="post" class="add-project-form">
+        <h2><%= project.title %></h2>
+        <input type="text" name="title" value="<%= project.title %>" placeholder="Enter your project title" required>
+        <div class="option-container">
+            <label for="type">Choose application type</label>
+            <select name="type" value="<%= project.type %>" id="type">
+                <option value="choose" selected disabled>Choose below options</option>
+                <option value="nodeJs">Node Js</option>
+                <option value="reactJs">React Js</option>
+                <option value="restApi">REST API</option>
+                <option value="javaScript">JavaScript</option>
+            </select>
+        </div>
+        <input type="url" name="githubLink" value="<%= project.githubLink %>" placeholder="Enter your github repository link" required>
+        <input type="url" name="deployedLink" value="<%= project.deployedLink %>" placeholder="Enter your deployed link" >
+        <button type="submit">Update Project</button>
+    </form>
+</div>
+
+<%- include('./partials/footer') -%>
