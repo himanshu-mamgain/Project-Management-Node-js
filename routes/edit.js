@@ -8,7 +8,7 @@ const date = require('../Date');
 const Project = require('../models/project');
 
 router.get('/:id', async (req, res) => {
-    var foundProject = await Project.findOne({"id" : req.params.id});
+    var foundProject = await Project.findById(req.params.id);
     try {
         res.render('update', {project: foundProject, date: date});
     } catch(err) {
