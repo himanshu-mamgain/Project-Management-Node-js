@@ -47,6 +47,8 @@ h2 {
   
 .flip-card-back {
     background-color: #F0DB4F;
+    height: auto;
+    min-height: 100%;
     color: #000;
     transform: rotateY(180deg);
 }
@@ -87,6 +89,15 @@ h2 {
     margin: 10px auto;
 }
 
-@media  only screen and (max-width: 800px) {
-    
+.totalProject {
+    width: fit-content;
+    padding: 8px;
+    margin: 0 1%;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #F0DB4F;
+    position: fixed;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+    z-index: 10;
+    cursor: none;
 }

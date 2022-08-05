@@ -1,9 +1,13 @@
 <%- include('./partials/header') -%>
-<link rel="stylesheet" href="project.css">
+<link rel="stylesheet" href="/project.css">
 
 <script src="https://kit.fontawesome.com/a6c541db65.js" crossorigin="anonymous"></script>
 
 <%- include('./partials/filter') -%>
+
+<div class="totalProject">
+    <h3><%= totalProjects %></h3>
+</div>
 
 <div class="projects">
     <h2>These are all the projects which i have created and deployed on Heroku.</h2>
@@ -26,7 +30,7 @@
                                         <i class="fas fa-trash del" style="color: red;"></i>
                                     </button>
                                 </form>
-                                <form action="/<%= project.id %>" method="get" class="action-form">
+                                <form action="/project/edit/<%= project.id %>" method="get" class="action-form">
                                     <button type="submit">
                                         <i class="fas fa-edit" style="color: #999;"></i>
                                     </button>

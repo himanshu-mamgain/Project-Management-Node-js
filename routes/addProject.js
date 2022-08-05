@@ -1,6 +1,5 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const jwt = require('jsonwebtoken');
 
 const router = express.Router();
 
@@ -32,11 +31,11 @@ router.post("/add%20projects", async (req, res) => {
             case "javaScript":
                 imgLink = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png";
                 break;
-            case "php":
-                imgLink = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png"
-                break;
+            case "html&css":
+                imgLink = "https://miro.medium.com/max/792/1*lJ32Bl-lHWmNMUSiSq17gQ.png";
+                break;    
             default:
-                imgLink = "https://www.kindpng.com/picc/m/388-3883219_icon-security-testing-web-web-application-testing-icon.png"
+                imgLink = "https://jkfenner.com/wp-content/uploads/2019/11/default.jpg"
         }
 
         const user = await User.findById(req.cookies.userId);
