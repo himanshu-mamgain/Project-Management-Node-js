@@ -1,0 +1,49 @@
+<%- include('./partials/header') -%>
+
+<link rel="stylesheet" href="style.css">
+
+<div class="home-container">
+    <h2>Created to arrange multiple projects at one place.</h2>
+    <hr>
+    <h2>These are all my projects of NodeJs, ReactJs, REST APIs and JavaScript.</h2>
+    <h2>The image at the front showing the technologies which used to create these projects.</h2>
+    <h2>Click to flip them and view the github link and deployed link of the project.</h2>
+</div>
+
+<link rel="stylesheet" href="/project.css">
+
+<script src="https://kit.fontawesome.com/a6c541db65.js" crossorigin="anonymous"></script>
+
+<div class="project-display-container">
+    <% projects.map((project) => { %>
+        <div class="card-container">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="<%= project.imgLink %>" alt="projectImg" style="width:300px;height:300px;">
+                </div>
+                <div class="flip-card-back">
+                    <h1 class="project-title"><%= project.title %></h1> 
+                    <a href="<%= project.githubLink %>" target="_blank">GitHub Link</a>
+                    <a href="<%= project.deployedLink %>" target="_blank">Deployed Link</a>
+                    <div class="action-btn-container">
+                        <form action="/project/delete/<%= project.id %>" method="post" class="action-form">
+                            <button type="submit">
+                                <i class="fas fa-trash" style="color: red;"></i>
+                            </button>
+                        </form>
+                        <form action="/project/edit/<%= project.id %>" method="get" class="action-form">
+                            <button type="submit">
+                                <i class="fas fa-edit" style="color: #999;"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <span><%= project.username %></span>
+                </div>
+                </div>
+            </div>
+        </div>
+    <% }); %>
+</div>
+
+<%- include('./partials/footer') -%>

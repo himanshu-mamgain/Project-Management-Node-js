@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management || Node.Js</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9Ry9nx7c9S3KocVuj7xPz01CUACpSD-HsVw7OeXa23QgmiH4TGLZf_DvuuBWMqQO1Sjg&usqp=CAU" type="image/x-icon">
+    <link rel="stylesheet" href="/header.css" type="text/css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <% if(user) { %>
+                    <li>
+                        <h3>Welcome <%= user.username %></h3>
+                    </li>
+                <% } else { %>
+                    <li>
+                        <h3>Project Management</h3>
+                    </li>
+                <% } %>
+                <div class="link-container">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/projects">Projects</a>
+                    </li>
+                    <li>
+                        <a href="/add%20projects">Add Projects</a>
+                    </li>
+                    <% if(user) { %>
+                        <li>
+                            <a href="/logout">Logout</a>
+                        </li>
+                    <% } else { %>
+                        <li>
+                            <a href="/login">Login</a>
+                        </li>
+                    <% } %>
+                </div>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

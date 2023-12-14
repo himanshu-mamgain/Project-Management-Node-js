@@ -1,0 +1,19 @@
+<%- include('./partials/header') -%>
+
+<link rel="stylesheet" href="/form.css" type="text/css">
+
+<div class="form-container">
+    <span id="err-msg"><%= err %></span>
+    <form action="/login" method="post" class="login-form">
+        <h2>Login: to add project</h2>
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <input type="password" name="password" placeholder="Enter your password" required>
+        <button type="submit">Login</button>
+    </form>
+    <h2 style="color: #000; margin-top: 30px;">If not a registered user please click on signup button below</h2>
+    <form action="/signup" method="get" class="signup-form">
+        <button type="submit">SignUp</button>
+    </form>
+</div>
+
+<%- include('./partials/footer') -%>
